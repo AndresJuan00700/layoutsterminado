@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_TallerDeLayous.PrincipalPage"
+             Title="Principal" Background="white">
+    <ContentPage.Content >
+        <StackLayout Margin="10" Padding="5">
+            <CollectionView ItemsSource="{Binding Menuclass}"
+                        SelectionMode="Single"
+                        SelectionChanged="CollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>                    
+                    <DataTemplate>                        
+                        <Label Text="{Binding Tittle}" Padding="10" TextColor="Black" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="YOUR CALENDAR"
+                    Clicked="Button_Clicked2"   Margin="0,0,0,380" BackgroundColor="Transparent"   Padding="0,-30,170,0" />
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
